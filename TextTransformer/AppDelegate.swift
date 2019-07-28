@@ -8,13 +8,21 @@
 
 import Cocoa
 
+//THIS IS THE ONLY THING THAT EXISTS WHEN THE PROGRAM RUNS
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    
+    //this line allows macOS to determine the appropriate width of menu bar space occupied
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        
+        statusItem.button?.title = "🌮"
+        
+        statusItem.button?.target = self
+        statusItem.button?.action = #selector(showSettings)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -22,5 +30,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
 
+    @objc func showSettings() {
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateController(withIdentifier: "ViewController") as?
+            ViewController else {
+                fatalError("Unable to find ViewController in the storyboard")
+        }
+        
+        let popoverView = NSPopover()       //this creates the drop down menu
+        popoverView.contentViewController = vc  //set the view of the popover to the UI built earlier
+        popoverView.behavior = .transient       //this allows popover to disappear when clicked off of
+    }
 }
 
