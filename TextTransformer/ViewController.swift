@@ -46,6 +46,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
     
     @IBAction func copyToPasteboard(_ sender: Any) {
+        //clear whatever was previously in the pasteboard
+        NSPasteboard.general.clearContents()
+        //grab text from output field and copies to pasteboard
+        NSPasteboard.general.setString(output.stringValue, forType: .string)
     }
     
     func rot13(_ input: String) -> String {
@@ -57,7 +61,13 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
     
     func strike(_ input: String) -> String {
-        return "Strike: " + input
+        var output = ""
+        for letter in input {
+            output.append(letter)
+            
+            output.append("\u{0335}")       //unicode string for strikethrough
+        }
+        return output
     }
     
     func zalgo(_ input: String) -> String {
