@@ -57,7 +57,18 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
     
     func similar(_ input: String) -> String {
-        return "Similar: " + input
+        var output = input
+        
+        output = output.replacingOccurrences(of: "a", with: "а")
+        output = output.replacingOccurrences(of: "e", with: "е")
+        output = output.replacingOccurrences(of: "i", with: "і")
+        output = output.replacingOccurrences(of: "o", with: "о")
+        output = output.replacingOccurrences(of: "c", with: "с")
+        
+        output = output.replacingOccurrences(of: "A", with: "А")
+        output = output.replacingOccurrences(of: "P", with: "Р")
+        
+        return output
     }
     
     func strike(_ input: String) -> String {
