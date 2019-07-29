@@ -11,6 +11,8 @@
 		1C77C5D322EE5CBA00033999 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C77C5D222EE5CBA00033999 /* ViewController.swift */; };
 		1C77C5D522EE5CBA00033999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C77C5D422EE5CBA00033999 /* Assets.xcassets */; };
 		1C77C5D822EE5CBA00033999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C77C5D622EE5CBA00033999 /* Main.storyboard */; };
+		1C77C5E122EE7EFF00033999 /* zalgo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C77C5E022EE7EFE00033999 /* zalgo.json */; };
+		1C77C5E322EE7F1B00033999 /* ZalgoCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C77C5E222EE7F1B00033999 /* ZalgoCharacters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		1C77C5D722EE5CBA00033999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C77C5D922EE5CBA00033999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C77C5DA22EE5CBA00033999 /* TextTransformer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TextTransformer.entitlements; sourceTree = "<group>"; };
+		1C77C5E022EE7EFE00033999 /* zalgo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zalgo.json; sourceTree = "<group>"; };
+		1C77C5E222EE7F1B00033999 /* ZalgoCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZalgoCharacters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			children = (
 				1C77C5D022EE5CBA00033999 /* AppDelegate.swift */,
 				1C77C5D222EE5CBA00033999 /* ViewController.swift */,
+				1C77C5E222EE7F1B00033999 /* ZalgoCharacters.swift */,
 				1C77C5D422EE5CBA00033999 /* Assets.xcassets */,
 				1C77C5D622EE5CBA00033999 /* Main.storyboard */,
+				1C77C5E022EE7EFE00033999 /* zalgo.json */,
 				1C77C5D922EE5CBA00033999 /* Info.plist */,
 				1C77C5DA22EE5CBA00033999 /* TextTransformer.entitlements */,
 			);
@@ -123,6 +129,7 @@
 			files = (
 				1C77C5D522EE5CBA00033999 /* Assets.xcassets in Resources */,
 				1C77C5D822EE5CBA00033999 /* Main.storyboard in Resources */,
+				1C77C5E122EE7EFF00033999 /* zalgo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +142,7 @@
 			files = (
 				1C77C5D322EE5CBA00033999 /* ViewController.swift in Sources */,
 				1C77C5D122EE5CBA00033999 /* AppDelegate.swift in Sources */,
+				1C77C5E322EE7F1B00033999 /* ZalgoCharacters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
